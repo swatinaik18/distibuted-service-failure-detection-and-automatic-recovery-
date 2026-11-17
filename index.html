@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Distributed Service Monitor</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>⚡ DS Monitor</h2>
+
+            <nav>
+                <a href="#" class="active">▦ Dashboard</a>
+                <a href="#services">◈ Services</a>
+                <a href="#activity">◷ Activity Logs</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                Distributed System<br>
+                <span>Monitoring Platform</span>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h1>System Dashboard</h1>
+                    <p>Monitor and manage your distributed services.</p>
+                </div>
+
+                <div class="connection">
+                    <span class="online-dot"></span>
+                    System Monitoring
+                </div>
+            </header>
+
+            <!-- Statistics -->
+            <section class="stats">
+
+                <div class="stat-card">
+                    <p>Total Services</p>
+                    <h2 id="totalServices">0</h2>
+                    <span>Registered services</span>
+                </div>
+
+                <div class="stat-card">
+                    <p>Healthy Services</p>
+                    <h2 id="healthyServices">0</h2>
+                    <span>Currently responding</span>
+                </div>
+
+                <div class="stat-card">
+                    <p>Failed Services</p>
+                    <h2 id="failedServices">0</h2>
+                    <span>Requires attention</span>
+                </div>
+
+                <div class="stat-card">
+                    <p>Total Recoveries</p>
+                    <h2 id="totalRecoveries">0</h2>
+                    <span>Automatic restarts</span>
+                </div>
+
+            </section>
+
+            <!-- Services -->
+            <section id="services" class="panel">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Service Overview</h2>
+                        <p>Live status of your distributed services</p>
+                    </div>
+
+                    <span class="live-label">● LIVE</span>
+                </div>
+
+                <div id="serviceList" class="service-list">
+                    Loading services...
+                </div>
+
+            </section>
+
+            <!-- Activity Logs -->
+            <section class="panel">
+                <h2>Live Response Time</h2>
+
+                <div class="chart-container">
+                    <canvas id="responseTimeChart"></canvas>
+                </div>
+            </section>
+            <section id="activity" class="panel">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Activity Logs</h2>
+                        <p>Recent monitoring and recovery events</p>
+                    </div>
+                </div>
+
+                <div id="activityLogs" class="logs">
+                    <p>Waiting for activity...</p>
+                </div>
+
+            </section>
+
+            <footer>
+                Distributed Service Failure Detection
+                and Automatic Recovery System
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
